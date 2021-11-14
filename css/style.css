@@ -1,0 +1,90 @@
+html,
+body {
+  height: 100%;
+  font-family: "Muli", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #f36100;
+}
+
+header {
+  height: 100vh;
+  background-image: url("../img/hero-1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+header .header-content {
+  height: 3rem;
+  padding: 3rem;
+  margin: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header .header-content .logo img {
+  max-width: 100%;
+}
+
+header .header-content nav {
+  margin-right: 140px;
+}
+
+header .header-content nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 3rem;
+}
+
+header .header-content nav ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  display: block;
+  position: relative;
+  text-align: center;
+}
+
+header .header-content nav ul li:hover a::after,
+header .header-content nav ul li.active a::after {
+  content: "";
+  background-color: var(--main-color);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 13px;
+  left: 0;
+  transform: rotate(-20deg);
+}
+
+header .header-content nav ul li.active > a {
+  color: var(--main-color);
+}
+header .header-content nav ul li a:hover {
+  color: var(--main-color);
+}
+header .header-content .icons {
+  display: flex;
+  gap: 1rem;
+}
+header .header-content .icons i:first-child,
+header .header-content .icons i:hover {
+  color: var(--main-color);
+}
+header .header-content .icons i {
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
