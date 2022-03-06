@@ -2,6 +2,7 @@ html,
 body {
   height: 100%;
   font-family: "Muli", sans-serif;
+  overflow-x: hidden;
 }
 
 * {
@@ -14,11 +15,34 @@ body {
   --main-color: #f36100;
 }
 
+.btn {
+  background-color: var(--main-color);
+  padding: 1rem;
+  width: 50px;
+  border: none;
+}
+
+.btn-outline{
+  border: 2px solid var(--main-color);
+  text-transform: uppercase;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover{
+  background: var(--main-color);
+}
+
+.container{
+  padding: 0 20%;
+}
+
 header {
   height: 100vh;
   background-image: url("../img/hero-1.jpg");
   background-position: center;
   background-size: cover;
+  position: relative;
 }
 
 header .header-content {
@@ -79,6 +103,40 @@ header .header-content .icons {
   display: flex;
   gap: 1rem;
 }
+
+header .header-content ul.hover {
+  color: #fff;
+  list-style-type: none;
+  background: #252525;
+  padding: 20px 40px;
+  width: 200px;
+  position: absolute;
+  top: 10%;
+  left: 57%;
+  transition: 1s all ease-in-out;
+  z-index: 100;
+  display: none;
+}
+
+header .header-content ul.hover li {
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  text-align: left;
+  font-size: 1rem;
+  transition: 1s all ease-in-out;
+}
+header .header-content ul.hover li:last-child {
+  margin-bottom: 0;
+}
+
+header .header-content ul.hover li:hover {
+  color: var(--main-color);
+  padding-left: 10px;
+}
 header .header-content .icons i:first-child,
 header .header-content .icons i:hover {
   color: var(--main-color);
@@ -87,4 +145,453 @@ header .header-content .icons i {
   font-size: 1rem;
   color: #fff;
   cursor: pointer;
+}
+
+header .text {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+}
+header .text P {
+  margin-bottom: 1rem;
+  letter-spacing: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+header .text h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 90px;
+  margin-bottom: 3.5rem;
+  font-family: "Oswald", sans-serif;
+}
+header .text h1 span {
+  color: var(--main-color);
+}
+
+header .text a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 17px 30px 16px;
+  transition: 2s all ease-in-out;
+}
+
+header .text a:hover {
+  background-color: #fff;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+}
+/* chose section */
+section.chose {
+  background: #0a0a0a;
+}
+
+section .section-title {
+  text-align: center;
+  color: #fff;
+  padding-top: 6rem;
+}
+
+.text-left{
+  text-align: left !important;
+  padding-left: 20rem;
+  margin:  unset !important;
+  padding-bottom: 2rem !important;
+}
+
+section .section-title span {
+  color: var(--main-color);
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+section .section-title h1 {
+  margin: 0 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+section .item-container {
+  padding: 2rem 20%;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .item-container .item {
+  padding: 1rem;
+  text-align: center;
+  max-width: 100%;
+}
+
+section .item-container .item span {
+  padding: 1.5rem;
+  background-color: #151515;
+  color: var(--main-color);
+  border-radius: 50%;
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+  transition: all 1s ease-in-out;
+}
+
+section .item-container .item span:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+section .item-container .item h4 {
+  color: #ffff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-family: "Oswald", sans-serif;
+}
+
+section .item-container .item p {
+  font-size: 14px;
+  font-family: "Muli", sans-serif;
+  color: #a9a9a9;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 15px 0;
+}
+
+section.classes{
+  background: #151515;
+}
+
+/* classes section */
+
+.row{
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+  gap: 4%;
+}
+
+.classes .box{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+
+}
+
+.classes .box img{
+  width: 100%;
+}
+
+
+
+.classes .box .text{
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    background: #0a0a0a;;
+}
+
+.classes .box .text .txt-container{
+  text-transform: uppercase;
+
+}
+.classes .box .text .txt-container div:first-child{
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.classes .box .text .txt-container div:last-child{
+  color: #fff;
+  margin-top: 4px;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+
+}
+
+.classes .box .text .icon{
+  background: #232323;
+  padding: 1rem;
+  transition: background .5s ease-in-out;
+  cursor: pointer;
+}
+
+.classes .box .text .icon i {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.classes .box .text .icon:hover{
+  background: #fff;
+}
+.classes .box .text .icon:hover i{
+  color: var(--main-color);
+}
+
+/* Regtration Section */
+
+.regstration{
+  background: url('../img/banner-bg.jpg.webp');
+  width: 100%;
+}
+
+.container-regstration{
+ padding: 10rem 0;
+ text-align: center;
+ font-family: "Muli", sans-serif;
+}
+
+.registration-heading{
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.registration-sub-heading{
+  color: #c4c4c4;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 64px;
+}
+
+.registration-sub-heading span{
+  color: var(--main-color);
+}
+
+
+.container-regstration a {
+  text-decoration: none;
+  color: #fff;
+  padding: 16px 24px;
+}
+
+/* section plan */
+
+section.plan,
+section.our-team{
+  background: #151515;
+}
+
+.plan-container{
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:30px;
+}
+
+.plan .box{
+  font-family: "Oswald", sans-serif;
+  border: 1px solid #464646;
+  text-align: center;
+  padding: 40px 30px 52px;
+  margin-bottom: 64px;
+  transform: skewY(-4deg);
+  width: 100%;
+  transition: all 0.5s;
+}
+
+.plan .box .title{
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 16px;
+  transform: skewY(4deg);
+  font-weight: 600;
+}
+
+.plan .box .price{
+  color: var(--main-color);
+  font-weight: bolder;
+  font-size: 64px;
+  transform: skewY(4deg);
+}
+
+.plan .box .per-class{
+  text-transform: uppercase;
+  color: #999;
+  transform: skewY(4deg);
+  font-size: 24px;
+  margin-top: -10px;
+  margin-bottom: 32px;
+}
+
+.plan .box ul{
+  list-style-type: none;
+  color: #a9a9a9;
+  transform: skewY(4deg);
+  margin-bottom: 16px;
+}
+
+.plan .box ul li {
+  margin-bottom: 10px;
+}
+
+.plan .box a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.plan .box .enroll-btn{
+  display: block;
+  background-color: #333333;
+  padding: 16px 20px;
+  transform: skewY(4deg);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.plan .box:hover{
+  background-color: #fff;
+  border: 1px solid transparent;
+  transform: skewY(4deg);
+}
+.plan .box:hover .title{
+  color: #292929da;
+  transform: skewY(-4deg);
+
+}
+
+.plan .box:hover ul {
+  color: #292929;
+  transform: skewY(-4deg);
+}
+
+.plan .box:hover .per-class,
+.plan .box:hover .price{
+  transform: skewY(-4deg);
+}
+.plan .box:hover .enroll-btn{
+  background-color: var(--main-color);
+  transform: skewY(-4deg);
+}
+
+/* gallery section */
+section.gallery{
+  background: #151515;
+}
+
+.gallery-container .row-1,
+.gallery-container .row-2{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+.gallery-container .row-2{
+  margin-top: 10px;
+}
+
+.gallery img{
+  display: block;
+  transition: all 0.2s;
+}
+
+.gallery img:hover{
+  transform: scale(1.1);
+}
+
+/* our team */
+
+.cont {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  
+}
+
+.cont a {
+  text-decoration: none;
+  color: #fff;
+  padding: 16px 24px;
+
+}
+
+.teams{
+  padding: 1rem 19%;
+}
+
+.memmbers{
+  display: flex;
+  gap:1.5rem;
+  flex-wrap: nowrap;
+}
+
+.memmber-box{
+  width: 100%;
+}
+
+.memmber-box img{
+  width: 100%;
+}
+
+.memmber-text{
+  background-color: #0A0A0A;
+  transform: translateY(-80%);
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  border-top: 3px solid gray;
+  transition: all .3s ease-in;
+  opacity: 0;
+}
+
+.name,
+.memm-title{
+  transform: skewY(6deg);
+}
+
+.name{
+  padding-top: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  font-size: 1.6rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
+}
+
+.memm-title{
+  color: var(--main-color);
+}
+
+.sp{
+  background: #0A0A0A;
+  height: 2rem;
+  width: 100%;
+  margin: -20px 0;
+  padding: 1.4rem;
+  transform: translateY(-120%);
+  transition: all .3s ease-in;
+  opacity: 0;
+}
+
+.memmber-box:hover .memmber-text{
+  transform: skewY(-6deg);
+  margin-top: -100px;
+  opacity: 1;
+
+}
+
+.memmber-box:hover .sp{
+  margin-top: 35px;
+  opacity: 1;
+  
 }
